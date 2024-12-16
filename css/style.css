@@ -22082,6 +22082,9 @@ border-radius:20px 0 0 20px;
 }
 
 @media (min-width: 992px) {
+  .height{
+    height: 30rem !important;
+  }
   .half-fluid .left-half {
     padding-left: 0 !important;
     position: absolute;
