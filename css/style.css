@@ -306,7 +306,7 @@ header.autoshow.scrollOn {
 }
 
 header.autoshow.scrollOff {
-  opacity: ;
+  opacity: 10;
   top: -120px;
 }
 
