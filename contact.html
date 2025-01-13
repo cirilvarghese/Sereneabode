@@ -144,7 +144,7 @@
 
                                             <div class="fw-bold text-dark"><i
                                                     class="icofont-phone me-2 id-color-2"></i>Call Us Directly</div>
-                                                    705-303-9430
+                                            705-303-9430
 
                                             <div class="spacer-20"></div>
 
@@ -176,6 +176,16 @@
                                     <div class="field-set">
                                         <input type="text" name="Phone" id="phone" class="form-control"
                                             placeholder="Your Phone" required>
+                                    </div>
+
+                                    <div class="field-set">
+                                        <select required class="form-select" id="plan" name="plan"
+                                            aria-label="Default select example">
+                                            <option disabled selected>Select Plan</option>
+                                            <option value="Basic Plan">Basic Plan</option>
+                                            <option value="Standard Plan">Standard Plan</option>
+                                            <option value="Premium Plan">Premium Plan</option>
+                                        </select>
                                     </div>
 
                                     <div class="field-set mb20">
@@ -243,19 +253,22 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1">
                         <div class="widget">
-                            <div class="fw-bold text-white" style="margin-left: -0.5rem;"><i class="icofont-clock-time me-2 id-color-2"></i>We're Open
+                            <div class="fw-bold text-white" style="margin-left: -0.5rem;"><i
+                                    class="icofont-clock-time me-2 id-color-2"></i>We're Open
                             </div>
                             24/7 Service Available
 
                             <div class="spacer-20"></div>
 
-                            <div class="fw-bold text-white" style="margin-left: -0.5rem;"><i class="icofont-location-pin me-2 id-color-2">
+                            <div class="fw-bold text-white" style="margin-left: -0.5rem;"><i
+                                    class="icofont-location-pin me-2 id-color-2">
                                 </i>Location</div>
                             4225 Highway 11 N, North Bay, ON
 
                             <div class="spacer-20"></div>
 
-                            <div class="fw-bold text-white" style="margin-left: -0.5rem;"><i class="icofont-envelope me-2 id-color-2"></i>Send a
+                            <div class="fw-bold text-white" style="margin-left: -0.5rem;"><i
+                                    class="icofont-envelope me-2 id-color-2"></i>Send a
                                 Message</div>
                             info@Serenabode.ca
                         </div>
@@ -268,7 +281,8 @@
                         <div class="col-md-12">
                             <div class="de-flex">
                                 <div class="de-flex-col">
-                                    Copyright 2024 Sereneabode. All rights reserved | Designed by <a href="https://dotscape.ca" class="ms-1">Dotscape</a>
+                                    Copyright 2024 Sereneabode. All rights reserved | Designed by <a
+                                        href="https://dotscape.ca" class="ms-1">Dotscape</a>
                                 </div>
                                 <ul class="menu-simple">
                                     <li><a href="termsandcondition.html">Terms &amp; Conditions</a></li>
@@ -333,6 +347,16 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
+    <script>
+        // Get the selected plan from localStorage
+        const selectedPlan = localStorage.getItem('selectedPlan');
+
+        // If a plan is selected, set it as the default in the dropdown
+        if (selectedPlan) {
+            const planDropdown = document.getElementById('plan');
+            planDropdown.value = selectedPlan;
+        }
+    </script>
 
 </body>
 
